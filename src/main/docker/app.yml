@@ -1,0 +1,20 @@
+version: '2'
+services:
+    dashboard-app:
+        image: dashboard
+        environment:
+            # - _JAVA_OPTIONS=-Xmx512m -Xms256m
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://dashboard-postgresql:5432/dashboard
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=dashboard-elasticsearch:9300
+        ports:
+            - 8080:8080
+    dashboard-postgresql:
+        extends:
+            file: postgresql.yml
+            service: dashboard-postgresql
+    dashboard-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: dashboard-elasticsearch
