@@ -145,3 +145,4 @@ Desktop.ini
 .eslintcache
 package-lock.json
 yarn.lock
+src/main/resources/config/application-dev.yml
