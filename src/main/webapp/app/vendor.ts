@@ -79,3 +79,16 @@ library.add(faTrashAlt);
 library.add(faAsterisk);
 
 // jhipster-needle-add-element-to-vendor - JHipster will add new menu items here
+
+// import "pace-js/pace.min.js";
+
+import "tinymce/tinymce.min.js";
+import "tinymce/themes/modern/theme.min.js";
+import "tinymce/plugins/link/plugin.min.js";
+import "tinymce/plugins/paste/plugin.min.js";
+import "tinymce/plugins/table/plugin.min.js";
+
+import "echarts/dist/echarts.min.js";
+import "echarts/dist/extension/bmap.min.js";
+			  
+import "chart.js/dist/Chart.min.js";
